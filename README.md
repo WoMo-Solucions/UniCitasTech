@@ -1,7 +1,7 @@
 # 🎓 UniCitasTech  
 ## Sistema Integral de Gestión de Tutorías Universitarias  
 
-![Estado](https://img.shields.io/badge/🚀_En_Desarrollo-blue) ![Licencia](https://img.shields.io/badge/Licencia-🔒_Privada-red) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white) ![n8n](https://img.shields.io/badge/n8n-Automation-orange?logo=n8n&logoColor=white)  ![Supabase](https://img.shields.io/badge/Supabase-Auth_%26_DB-3ECF8E?logo=supabase&logoColor=white) 
+![Estado](https://img.shields.io/badge/🚀_En_Desarrollo-blue) ![Licencia](https://img.shields.io/badge/Licencia-🔒_Privada-red) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-Auth_%26_DB-3ECF8E?logo=supabase&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) ![n8n](https://img.shields.io/badge/n8n-Automation-orange?logo=n8n&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-Containerization-2496ED?logo=docker&logoColor=white) ![Render](https://img.shields.io/badge/Render-Cloud_Deploy-0099FF?logo=render&logoColor=white)
 
 ## 📋 Descripción del Sistema  
 Es una solución tecnológica enfocada en la **gestión inteligente y automatizada de tutorías universitarias**.  
@@ -14,25 +14,34 @@ Incluye:
 - Notificación por correo corporativo (n8n + Gmail)  
 - Interfaz responsive accesible desde cualquier dispositivo  
 
-## 🛠 Stack Tecnológico  
-**Backend Automatizado:**  
-- n8n (Render) – Webhooks para disponibilidad y reservas  
-- Supabase (PostgreSQL) – Persistencia de datos y autenticación  
-- Gmail corporativo – SMTP seguro para notificaciones  
-- RLS (Row Level Security) – Políticas de acceso controlado  
+## 🛠 Stack Tecnológico
+**Backend:**
+- Flask (Python 3.10+) o Node.js/Express según proyecto
+- Autenticación JWT / RBAC
 
-**Frontend:**  
-- HTML5 + CSS3 + JavaScript (Vanilla)  
-- Diseño responsive adaptable (Android / iOS / Escritorio)  
-- Integración directa con Supabase Auth  
+**Base de Datos:**
+- PostgreSQL en **Supabase** (Auth + RLS + REST)
 
-## 🖥️ Infraestructura  
-**Entorno de Desarrollo / MVP:**  
-- Frontend estático (Render o GitHub Pages)  
-- Backend automatizado (n8n en Render)  
-- Base de datos administrada (Supabase PostgreSQL)  
-- Cifrado de contraseñas gestionado por Supabase  
-- Envío de correos corporativos mediante SMTP  
+**Frontend:**
+- HTML5, CSS3 (Bootstrap 5), JavaScript (ES6+)
+- Chart.js / componentes UI según proyecto
+
+**Automatizaciones:**
+- **n8n** para reportes, alertas, integraciones y jobs programados
+
+
+## 🖥️ Infraestructura
+**Render (Producción):**
+- Servicios separados: `frontend`, `backend`, `n8n` (todos en **Docker**)
+- HTTPS forzado, variables de entorno seguras
+
+**Supabase:**
+- PostgreSQL gestionado, políticas **RLS**, autenticación y almacenamiento
+- Backups automáticos y panel de métricas
+
+**Monitoreo:**
+- Logs estructurados, alertas y métricas de desempeño
+
 
 ## 🚀 Próximas Implementaciones  
 - Panel administrativo para bienestar universitario  
